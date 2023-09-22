@@ -1,0 +1,14 @@
+site_name: KU Genomic Data Science Core
+site_url: https://ku-gdsc.github.io
+theme:
+    name: sandstone
+nav:
+    - Home: index.md
+    - People: people.md
+    - Policies: policies.md
+    - Services: services.md
+plugins:
+    - search
+    - encriptmail:
+        placeholderAt: (at)
+        placeholderDot: (dot)
