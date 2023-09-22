@@ -8,4 +8,4 @@ Additionally, products that result from substantial contributions of our staff t
 
 ## Grant Applications
 
-We strongly encourage researchers to contact us at the earliest possible stage in the development of projects. Thorugh these conversations we can help discuss issues related to experimental design and data collection that may impact downstream analysis. These discussions will also help to clarify our estimates of the extent of our contributions to a project, which can result in letters of support or assignment of our staff as funded, grant personnel as necessary.
+We strongly encourage researchers to contact us at the earliest possible stage in the development of projects. Through these conversations we can help discuss issues related to experimental design and data collection that may impact downstream analysis. These discussions will also help to clarify our estimates of the extent of our contributions to a project, which can result in letters of support or assignment of our staff as funded, grant personnel as necessary.
