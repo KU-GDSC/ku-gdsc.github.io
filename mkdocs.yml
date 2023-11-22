@@ -36,12 +36,3 @@ markdown_extensions:
     - pymdownx.superfences
     - toc:
         permalink: "#"
-nav:
-  - Home: 'index.md'
-  - people.md
-  - policies.md
-  - services.md
-  - 'Resources':
-    - 'Useful commands cheatsheet': 'resources/cheatsheet.md'
-    - 'Running analysis workflows': 'resources/nextflow.md'
-    - 'Differential expression analysis': 'resources/dge.md'
