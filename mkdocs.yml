@@ -1,14 +1,47 @@
 site_name: KU Genomic Data Science Core
 site_url: https://KU-GDSC.github.io/
 theme:
-    name: sandstone
+    name: material
+    palette:
+
+      # Palette toggle for automatic mode
+      - media: "(prefers-color-scheme)"
+        toggle:
+          icon: material/brightness-auto
+          name: Switch to light mode
+
+      # Palette toggle for light mode
+      - media: "(prefers-color-scheme: light)"
+        scheme: default
+        toggle:
+         icon: material/brightness-7
+         name: Switch to dark mode
+
+      # Palette toggle for dark mode
+      - media: "(prefers-color-scheme: dark)"
+        scheme: slate
+        toggle:
+          icon: material/brightness-4
+          name: Switch to system preference
+    features:
+      - navigation.path
+      - navigation.expand
+        
+markdown_extensions:
+    - attr_list
+    - codehilite
+    - sane_lists
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
+    - toc:
+        permalink: "#"
 nav:
-    - Home: index.md
-    - People: people.md
-    - Policies: policies.md
-    - Services: services.md
-plugins:
-    - search
-    - encriptmail:
-        placeholderAt: (at)
-        placeholderDot: (dot)
+  - Home: 'index.md'
+  - people.md
+  - policies.md
+  - services.md
+  - 'Resources':
+    - 'Useful commands cheatsheet': 'resources/cheatsheet.md'
+    - 'Running analysis workflows': 'resources/nextflow.md'
+    - 'Differential expression analysis': 'resources/dge.md'
