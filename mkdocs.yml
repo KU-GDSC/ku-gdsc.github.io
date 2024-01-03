@@ -25,7 +25,6 @@ theme:
           name: Switch to system preference
     features:
       - navigation.path
-      - navigation.expand
         
 markdown_extensions:
     - attr_list
