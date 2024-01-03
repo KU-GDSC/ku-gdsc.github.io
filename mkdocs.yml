@@ -3,7 +3,7 @@ site_url: https://KU-GDSC.github.io/
 theme:
     name: material
     palette:
-      - scheme: slate
+      scheme: slate
 
     features:
       - navigation.path
