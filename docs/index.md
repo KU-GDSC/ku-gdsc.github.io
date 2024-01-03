@@ -29,6 +29,7 @@ We are a data analysis and training service for Kansas researchers, based at the
 * [People](people.md)
 * [Policies](policies.md)
 * [Services Offered](services.md)
+* [Documentation and Training](documentation/)
 
 # Contact
 
