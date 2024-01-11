@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 # People
 
 <img src="sanderson.jpg" width = "70%"> <br> Brian J. Sanderson, Ph.D. | <img src="macdonald.jpg" width = "70%"> <br> Stuart J. Macdonald, Ph.D. | <img src="unckless.jpg" width = "70%"> <br> Robert L. Unckless, Ph.D.
