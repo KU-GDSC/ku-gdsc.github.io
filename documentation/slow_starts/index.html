@@ -1,0 +1,844 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://KU-GDSC.github.io/documentation/slow_starts/">
+      
+      
+        <link rel="prev" href="../quick_starts/">
+      
+      
+        <link rel="next" href="../cheatsheet/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
+    
+    
+      
+        <title>Detailed Guides - KU Genomic Data Science Core</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#detailed-guides" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="KU Genomic Data Science Core" class="md-header__button md-logo" aria-label="KU Genomic Data Science Core" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            KU Genomic Data Science Core
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Detailed Guides
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/KU-GDSC/ku-gdsc.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    KU-GDSC/ku-gdsc.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../people/" class="md-tabs__link">
+        
+  
+    
+  
+  People
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../policies/" class="md-tabs__link">
+        
+  
+    
+  
+  Policies
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../services/" class="md-tabs__link">
+        
+  
+    
+  
+  Services Offered
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  Documentation and Training
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="KU Genomic Data Science Core" class="md-nav__button md-logo" aria-label="KU Genomic Data Science Core" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    KU Genomic Data Science Core
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/KU-GDSC/ku-gdsc.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    KU-GDSC/ku-gdsc.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../people/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    People
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Policies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../services/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Services Offered
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Documentation and Training
+  </span>
+  
+
+            </a>
+            
+              <label class="md-nav__link " for="__nav_5">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation and Training
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick_starts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick Start Guides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Detailed Guides
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Detailed Guides
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-configuration" class="md-nav__link">
+    SSH Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-interactively-on-the-cluster" class="md-nav__link">
+    Working interactively on the cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-nextflow-pipelines-on-the-cluster" class="md-nav__link">
+    Running Nextflow pipelines on the cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-long-running-jobs-on-the-cluster" class="md-nav__link">
+    Setting up long-running jobs on the cluster
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generally useful *nix command cheatsheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="detailed-guides">Detailed Guides<a class="headerlink" href="#detailed-guides" title="Permanent link">#</a></h1>
+<h3 id="ssh-configuration">SSH Configuration<a class="headerlink" href="#ssh-configuration" title="Permanent link">#</a></h3>
+<p>Normally, accessing the cluster via <code>ssh</code> and <code>scp</code> requires you to enter
+your username and password each time. However, it is possible to create a
+configuration profile on your local computer that will make this process
+more efficient. Using a text editor, you can create or edit the file 
+<code>~/.ssh/config</code> to include the following lines:</p>
+<div class="admonition note">
+<p class="admonition-title">Editing ~/.ssh/config</p>
+<div class="highlight"><pre><span></span><code>Host<span class="w"> </span>cluster
+<span class="w">    </span>HostName<span class="w"> </span>hpc.crc.ku.edu
+<span class="w">    </span>User<span class="w"> </span>USERNAME
+</code></pre></div>
+</div>
+<p>Where <code>USERNAME</code> is your own username. The host <code>cluster</code> is arbitrary, you
+any name you like. After editing or creating this file, you can now use
+less complicated <code>ssh</code> and <code>scp</code> commands to log in or copy files.</p>
+<div class="admonition note">
+<p class="admonition-title">Log in with an SSH config file</p>
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>cluster
+</code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Copy a file from your present working directory on your computer to your home directory on the cluster</p>
+<div class="highlight"><pre><span></span><code>scp<span class="w"> </span>myfile.txt<span class="w"> </span>cluster:/home/USERNAME
+</code></pre></div>
+</div>
+<h2 id="working-interactively-on-the-cluster">Working interactively on the cluster<a class="headerlink" href="#working-interactively-on-the-cluster" title="Permanent link">#</a></h2>
+<p>When you initially log in to the cluster you are on a "login node," which
+is designed for handling logins and basic tasks such as submitting 
+job scripts to the resource scheduler, but is not designed to
+handle resource-intensive analysis work. When you are on a login node, 
+the command prompt will look like this:</p>
+<div class="admonition note">
+<div class="highlight"><pre><span></span><code><span class="o">[</span>USERNAME@submit1<span class="w"> </span>~<span class="o">]</span>$
+</code></pre></div>
+</div>
+<p>If you want to work interactively
+on the cluster you must first request a "compute node," which lets you
+specify the number of CPUs, the amount of memory, etc. To request a
+compute node, use a command such as the following:</p>
+<div class="admonition note">
+<div class="highlight"><pre><span></span><code>srun --nodes=1 --mem=128G --time=01:00:00 --partition=sixhour --pty /bin/bash -l
+</code></pre></div>
+</div>
+<p>This command will allocate the resources you've requested, which in this case
+is a single node, with 128GB of memory, for 1 hour, using the "sixhour"
+community cluster. When you enter this command, you should see something
+like this:</p>
+<div class="admonition note">
+<div class="highlight"><pre><span></span><code>srun: job 55741230 queued and waiting for resources
+srun: job 55741230 has been allocated resources
+</code></pre></div>
+</div>
+<p>And you should notice that the command prompt has changed, and reflects
+that you are working on a compute node:</p>
+<div class="admonition note">
+<div class="highlight"><pre><span></span><code><span class="o">[</span>USERNAME@r11r12n03<span class="w"> </span>~<span class="o">]</span>$
+</code></pre></div>
+</div>
+<p>The program <code>crctool</code> allows you to see what resources you have available to request, either for interactive sessions or in <a href="#setting-up-long-running-jobs-on-the-cluster">job submission scripts</a></p>
+<h2 id="running-nextflow-pipelines-on-the-cluster">Running Nextflow pipelines on the cluster<a class="headerlink" href="#running-nextflow-pipelines-on-the-cluster" title="Permanent link">#</a></h2>
+<p>We have prepared some software modules to help make it more convenient to run pipelines on the cluster.
+In order to use these modules, you need to run the following commands:</p>
+<div class="admonition note">
+<div class="highlight"><pre><span></span><code>module<span class="w"> </span>use<span class="w"> </span>--append<span class="w"> </span>/panfs/pfs.local/work/sjmac/observer/modules
+module<span class="w"> </span>load<span class="w"> </span>nextflow
+</code></pre></div>
+</div>
+<p>The first line adds the set of modules the GDSC has prepared to your profile. The second line loads the module <code>nextflow</code>, which also load a few required programs such as <code>java</code> and <code>singularity</code>.</p>
+<p><strong>Note</strong>: these commands need to be run every time you log in, or in the body of any script that you run, in order for the modules to be loaded properly. In order to have this happen automatically, you can add those lines to the file <code>~/.bashrc</code>, which is used to load various programs every time you log into the cluster.</p>
+<p>To test that everything is working correctly, you can run a simple test program with the command:</p>
+<p><code>nextflow run hello</code></p>
+<p>If everything is loaded properly, you should see the following output</p>
+<div class="admonition note">
+<div class="highlight"><pre><span></span><code>N E X T F L O W  ~  version 23.04.3
+Launching `https://github.com/nextflow-io/hello` [confident_picasso] DSL2 - revision: 1d71f857bb [master]
+executor &gt;  local (4)
+[5a/e0c8dc] process &gt; sayHello (2) [100%] 4 of 4 ✔
+Hello world!
+
+Bonjour world!
+
+Hola world!
+
+Ciao world!
+</code></pre></div>
+</div>
+<h2 id="setting-up-long-running-jobs-on-the-cluster">Setting up long-running jobs on the cluster<a class="headerlink" href="#setting-up-long-running-jobs-on-the-cluster" title="Permanent link">#</a></h2>
+<p>Rather than running programs directly from the command line, as we've been doing so far, it often makes sense to prepare scripts that can be submitted to the CRC job scheduler to run in the background. This has several benefits:</p>
+<ol>
+<li>
+<p>Jobs run this way aren't tied to your login session, so if your computer goes to sleep or you get disconnected, they will continue running until they're completed.</p>
+</li>
+<li>
+<p>You can request much larger amounts of computing resources this way, and so it can make your job run more efficiently.</p>
+</li>
+<li>
+<p>The job scheduler can notify you via e-mail when your job completes (successfully or otherwise) so you don't need to keep a constant eye on things.</p>
+</li>
+</ol>
+<p>An example job script to run the simple Nextflow test job above looks like this:</p>
+<div class="admonition note">
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --job-name=nextflow_test</span>
+<span class="c1">#SBATCH --mail-type=END,FAIL</span>
+<span class="c1">#SBATCH --mail-user=&lt;YOUR_EMAIL_ADDRESS&gt;</span>
+<span class="c1">#SBATCH --ntasks=1</span>
+<span class="c1">#SBATCH --cpus-per-task 1</span>
+<span class="c1">#SBATCH --time=24:00:00</span>
+<span class="c1">#SBATCH --partition=sjmac</span>
+<span class="c1">#SBATCH --mem=10G</span>
+<span class="c1">#SBATCH --output=%x_%A.out</span>
+
+module<span class="w"> </span>use<span class="w"> </span>--append<span class="w"> </span>/panfs/pfs.local/work/sjmac/observer/modules
+module<span class="w"> </span>load<span class="w"> </span>nextflow
+
+<span class="nv">NXF_ANSI_SUMMARY</span><span class="o">=</span><span class="nb">true</span>
+<span class="nv">NXF_ANSI_LOG</span><span class="o">=</span><span class="nb">true</span>
+
+nextflow<span class="w"> </span>run<span class="w"> </span>hello
+</code></pre></div>
+</div>
+<p>The lines beginning with <code>#SBATCH</code> are all directions to the job submission system to specify how much memory you want (<code>#SBATCH --mem=</code>), how much time you want to allocate for the job (<code>#SBATCH --time</code>), and may other. More detail about job submission scripts is available on on the <a href="https://docs.crc.ku.edu/how-to/submitting-jobs/">CRC documentation website</a>.</p>
+<p>Try using the above example to make a script called <code>run_script.sh</code> on the cluster. Modify the line 
+<code>#SBATCH --mail-user=&lt;YOUR_EMAIL_ADDRESS&gt;</code> to replace <code>&lt;YOUR_EMAIL_ADDRESS&gt;</code> with your actual email address (e.g. <code>#SBATCH --mail-user=gdsc@ku.edu</code>).</p>
+<p><strong>sbatch</strong> Batch job submission to the Slurm job scheduler on the cluster.</p>
+<div class="admonition note">
+<p class="admonition-title">Submit a job script to run an analysis</p>
+<div class="highlight"><pre><span></span><code>sbatch run_script.sh
+</code></pre></div>
+</div>
+<p><strong>squeue</strong> Provide the status of running jobs on the cluster</p>
+<div class="admonition note">
+<p class="admonition-title">Check the status of jobs that you have submitted</p>
+<div class="highlight"><pre><span></span><code>squeue -u USERNAME
+</code></pre></div>
+</div>
+<p>The output should look like this:</p>
+<div class="admonition note">
+<div class="highlight"><pre><span></span><code>JOBID     PARTITION     NAME     USER     ST     TIME     NODES     NODELIST(REASON) 
+55741582_1     sjmac     treemix     observer     R     20:27:52     1     r11r12n02
+55741582_2     sjmac     treemix     observer     R     20:27:52     1     r06r28n03
+55741582_3     sjmac     treemix     observer     R     20:27:52     1     r15r18n02
+55741582_4     sjmac     treemix     observer     R     20:27:52     1     r15r18n02
+55741582_5     sjmac     treemix     observer     R     17:31:00     1     r11r12n02   
+</code></pre></div>
+</div>
+<p>The column "ST" refers to the state of the job. The most common states are:</p>
+<ul>
+<li>
+<p>PD: Pending</p>
+</li>
+<li>
+<p>R: Running</p>
+</li>
+<li>
+<p>CG: Completing</p>
+</li>
+</ul>
+<p><strong>scancel</strong> Cancel a job that is running on the cluster</p>
+<div class="admonition note">
+<p class="admonition-title">Cancel a specific job with the JobID (the first column of the <strong>squeue</strong> output)</p>
+<div class="highlight"><pre><span></span><code>scancel 0000001
+</code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Cancel all jobs that you have submitted that are running or pending</p>
+<div class="highlight"><pre><span></span><code>scancel -u USERNAME
+</code></pre></div>
+</div>
+<p>This is useful if you make a mistake with a big batch job that submits many subjobs</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 11, 2024</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "toc.integrate", "toc.follow"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+    
+  </body>
+</html>
