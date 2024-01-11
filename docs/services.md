@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 # Services Offered
 
 We are able to assist with a wide range of data analysis problems, such as:
@@ -19,4 +25,4 @@ These questions may be addressed with one or more of the following methods:
 
 We can provide detailed, reproducible analysis tools, intermediate and final analysis output, and publication-quality figures and tables.
 
-Note: we provide data analysis services. If you need to generate sequence data, please contact the [Genome Sequencing Core](https://gsc.ku.edu)
+Note: we provide data analysis services. If you need to generate sequence data, please contact the [Genome Sequencing Core](https://gsc.ku.edu){:target="\_blank"}
