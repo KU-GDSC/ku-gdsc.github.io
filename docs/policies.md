@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 # Policies
 
 ## Acknowledgement and Authorship

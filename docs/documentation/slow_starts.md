@@ -1,34 +1,4 @@
-# Genomic Data Science Training
-
-## Quick start for the KU CRC Cluster
-
-The CRC has detailed guides to working on their research computing environments, which can be found [on their website](https://docs.crc.ku.edu/quick-start/).
-
-### Accessing the cluster
-
-**ssh** Log in to a secure shell on a remote computer or server
-
-!!! note "Log on to the cluster"
-
-    ```bash
-    ssh USERNAME@hpc.crc.ku.edu
-    ```
-
-### Copying files to/from the cluster
-
-**scp** Copy files between your computer and the server, or vice versa.
-
-!!! note "Copy a file from your present working directory on your computer to your home directory on the cluster"
-
-    ```bash
-    scp myfile.txt USERNAME@hpc.crc.ku.edu:/home/USERNAME
-    ```
-
-!!! note "Copy a file from your home directory on the cluster to your present working directory on your computer"
-
-    ```bash
-    scp USERNAME@hpc.crc.ku.edu:/home/USERNAME/a_file.txt ./
-    ```
+# Detailed Guides 
 
 ### SSH Configuration
 
@@ -240,4 +210,5 @@ The column "ST" refers to the state of the job. The most common states are:
     ```
 
 This is useful if you make a mistake with a big batch job that submits many subjobs
+
 
