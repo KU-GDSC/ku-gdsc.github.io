@@ -46,3 +46,6 @@ nav:
       - documentation/quick_starts.md
       - documentation/slow_starts.md
       - documentation/cheatsheet.md
+      - Workflows:
+        - documentation/workflows/index.md
+        - documentation/workflows/microbial_rnaseq.md
