@@ -1,31 +1,25 @@
 site_name: KU Genomic Data Science Core
 site_url: https://KU-GDSC.github.io/
+repo_url: https://github.com/KU-GDSC/ku-gdsc.github.io/
+repo_name: 'KU-GDSC/ku-gdsc.github.io'
+
+
 theme:
     name: material
     palette:
+      scheme: slate
+    icon:
+      repo: fontawesome/brands/github
 
-      # Palette toggle for automatic mode
-      - media: "(prefers-color-scheme)"
-        toggle:
-          icon: material/brightness-auto
-          name: Switch to light mode
-
-      # Palette toggle for light mode
-      - media: "(prefers-color-scheme: light)"
-        scheme: default
-        toggle:
-         icon: material/brightness-7
-         name: Switch to dark mode
-
-      # Palette toggle for dark mode
-      - media: "(prefers-color-scheme: dark)"
-        scheme: slate
-        toggle:
-          icon: material/brightness-4
-          name: Switch to system preference
     features:
       - navigation.path
-        
+      - navigation.tabs
+      - navigation.tabs.sticky
+      - navigation.indexes
+      - navigation.top
+      - toc.integrate
+      - toc.follow
+
 markdown_extensions:
     - attr_list
     - codehilite
@@ -35,3 +29,23 @@ markdown_extensions:
     - pymdownx.superfences
     - toc:
         permalink: "#"
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      type: date
+      enabled_creation_date: true
+
+nav:
+    - index.md
+    - people.md
+    - policies.md
+    - services.md
+    - Documentation and Training:
+      - documentation/index.md
+      - documentation/quick_starts.md
+      - documentation/slow_starts.md
+      - documentation/cheatsheet.md
+      - Workflows:
+        - documentation/workflows/index.md
+        - documentation/workflows/microbial_rnaseq.md
