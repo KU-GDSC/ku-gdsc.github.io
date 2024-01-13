@@ -1,11 +1,11 @@
 # Workflow Documentation: 
 
-Currently Supported Workflows: 
+## KU GDSC developed workflows: 
 
 1. [Microbial RNA-seq: `microbial_rnaseq`](microbial_rnaseq.md)  
 
 
-# Quick Start for KU Users
+### Quick Start for KU Users
 
 !!! example "An example run script to run the [microbial RNAseq pipeline](https://github.com/KU-GDSC/workflows){:target="\_blank"}"
     ```bash
