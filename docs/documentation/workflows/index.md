@@ -35,6 +35,7 @@
         --pubdir /PATH/TO/OUTPUT/RESULTS \
         -w /PATH/TO/WORK/DIRECTORY \
         --strandedness reverse_stranded \
+        -profile gdsc \
         -resume
     ```
 **Notes:** 
