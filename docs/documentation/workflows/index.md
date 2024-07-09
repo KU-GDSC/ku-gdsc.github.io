@@ -20,7 +20,7 @@
     #SBATCH --mem=10G
     #SBATCH --output=%x_%A.out
 
-    module use --append /panfs/pfs.local/work/sjmac/observer/modules
+    module use --append /kuhpc/work/sjmac/observer/modules
     module load nextflow
 
     NXF_ANSI_SUMMARY=true

@@ -40,7 +40,7 @@ Include the following lines with the job submission script to use the pre-built 
 
 !!! note ""
     ```bash
-    module use --append /panfs/pfs.local/work/sjmac/observer/modules
+    module use --append /kuhpc/work/sjmac/observer/modules
     module load nextflow
 
     NXF_ANSI_SUMMARY=true
@@ -60,14 +60,14 @@ Include the following lines with the job submission script to use the pre-built 
     #SBATCH --mem=10G
     #SBATCH --output=%x_%A.out
 
-    module use --append /panfs/pfs.local/work/sjmac/observer/modules
+    module use --append /kuhpc/work/sjmac/observer/modules
     module load nextflow
 
     NXF_ANSI_SUMMARY=true
     NXF_ANSI_LOG=true
 
     nextflow run nf-core/rnaseq \
-        -c /panfs/pfs.local/work/sjmac/observer/profiles/gdsc.config
+        -c /kuhpc/work/sjmac/observer/profiles/gdsc.config
         --input sample_sheet.csv \
         --genome BDGP6 \
         --outdir output \
@@ -83,7 +83,7 @@ Include the following lines with the job submission script to use the pre-built 
 
 !!! note ""
     ```bash
-    module use --append /panfs/pfs.local/work/kucg/observer/modules
+    module use --append /kuhpc/work/kucg/observer/modules
     module load nextflow
 
     NXF_ANSI_SUMMARY=true
@@ -106,14 +106,14 @@ The GDSC workflows can be downloaded using Nextflow with the following command
     #SBATCH --mem=10G
     #SBATCH --output=%x_%A.out
 
-    module use --append /panfs/pfs.local/work/sjmac/observer/modules
+    module use --append /kuhpc/work/sjmac/observer/modules
     module load nextflow
 
     NXF_ANSI_SUMMARY=true
     NXF_ANSI_LOG=true
 
     nextflow run nf-core/rnaseq \
-        -c /panfs/pfs.local/work/kucg/observer/profiles/kucg.config
+        -c /kuhpc/work/kucg/observer/profiles/kucg.config
         --input sample_sheet.csv \
         --genome BDGP6 \
         --outdir output \

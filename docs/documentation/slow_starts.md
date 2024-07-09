@@ -88,7 +88,7 @@ In order to use these modules, you need to run the following commands:
 !!! note ""
 
     ```bash
-    module use --append /panfs/pfs.local/work/sjmac/observer/modules
+    module use --append /kuhpc/work/sjmac/observer/modules
     module load nextflow
     ```
 
@@ -144,7 +144,7 @@ An example job script to run the simple Nextflow test job above looks like this:
     #SBATCH --mem=10G
     #SBATCH --output=%x_%A.out
 
-    module use --append /panfs/pfs.local/work/sjmac/observer/modules
+    module use --append /kuhpc/work/sjmac/observer/modules
     module load nextflow
 
     NXF_ANSI_SUMMARY=true
