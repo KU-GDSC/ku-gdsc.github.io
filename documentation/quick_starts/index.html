@@ -750,7 +750,7 @@
 <h3 id="ku-genomic-data-science-core-users">KU Genomic Data Science Core users<a class="headerlink" href="#ku-genomic-data-science-core-users" title="Permanent link">#</a></h3>
 <p>Include the following lines with the job submission script to use the pre-built Nextflow modules </p>
 <div class="admonition note">
-<div class="highlight"><pre><span></span><code>module<span class="w"> </span>use<span class="w"> </span>--append<span class="w"> </span>/panfs/pfs.local/work/sjmac/observer/modules
+<div class="highlight"><pre><span></span><code>module<span class="w"> </span>use<span class="w"> </span>--append<span class="w"> </span>/kuhpc/work/sjmac/observer/modules
 module<span class="w"> </span>load<span class="w"> </span>nextflow
 
 <span class="nv">NXF_ANSI_SUMMARY</span><span class="o">=</span><span class="nb">true</span>
@@ -770,14 +770,14 @@ module<span class="w"> </span>load<span class="w"> </span>nextflow
 <span class="c1">#SBATCH --mem=10G</span>
 <span class="c1">#SBATCH --output=%x_%A.out</span>
 
-module<span class="w"> </span>use<span class="w"> </span>--append<span class="w"> </span>/panfs/pfs.local/work/sjmac/observer/modules
+module<span class="w"> </span>use<span class="w"> </span>--append<span class="w"> </span>/kuhpc/work/sjmac/observer/modules
 module<span class="w"> </span>load<span class="w"> </span>nextflow
 
 <span class="nv">NXF_ANSI_SUMMARY</span><span class="o">=</span><span class="nb">true</span>
 <span class="nv">NXF_ANSI_LOG</span><span class="o">=</span><span class="nb">true</span>
 
 nextflow<span class="w"> </span>run<span class="w"> </span>nf-core/rnaseq<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-c<span class="w"> </span>/panfs/pfs.local/work/sjmac/observer/profiles/gdsc.config
+<span class="w">    </span>-c<span class="w"> </span>/kuhpc/work/sjmac/observer/profiles/gdsc.config
 <span class="w">    </span>--input<span class="w"> </span>sample_sheet.csv<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--genome<span class="w"> </span>BDGP6<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--outdir<span class="w"> </span>output<span class="w"> </span><span class="se">\</span>
@@ -789,7 +789,7 @@ nextflow<span class="w"> </span>run<span class="w"> </span>nf-core/rnaseq<span c
 <h3 id="ku-center-for-genomics-users">KU Center for Genomics users<a class="headerlink" href="#ku-center-for-genomics-users" title="Permanent link">#</a></h3>
 <p>Include the following lines with the job submission script to use the pre-built Nextflow modules </p>
 <div class="admonition note">
-<div class="highlight"><pre><span></span><code>module<span class="w"> </span>use<span class="w"> </span>--append<span class="w"> </span>/panfs/pfs.local/work/kucg/observer/modules
+<div class="highlight"><pre><span></span><code>module<span class="w"> </span>use<span class="w"> </span>--append<span class="w"> </span>/kuhpc/work/kucg/observer/modules
 module<span class="w"> </span>load<span class="w"> </span>nextflow
 
 <span class="nv">NXF_ANSI_SUMMARY</span><span class="o">=</span><span class="nb">true</span>
@@ -810,14 +810,14 @@ module<span class="w"> </span>load<span class="w"> </span>nextflow
 <span class="c1">#SBATCH --mem=10G</span>
 <span class="c1">#SBATCH --output=%x_%A.out</span>
 
-module<span class="w"> </span>use<span class="w"> </span>--append<span class="w"> </span>/panfs/pfs.local/work/sjmac/observer/modules
+module<span class="w"> </span>use<span class="w"> </span>--append<span class="w"> </span>/kuhpc/work/sjmac/observer/modules
 module<span class="w"> </span>load<span class="w"> </span>nextflow
 
 <span class="nv">NXF_ANSI_SUMMARY</span><span class="o">=</span><span class="nb">true</span>
 <span class="nv">NXF_ANSI_LOG</span><span class="o">=</span><span class="nb">true</span>
 
 nextflow<span class="w"> </span>run<span class="w"> </span>nf-core/rnaseq<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-c<span class="w"> </span>/panfs/pfs.local/work/kucg/observer/profiles/kucg.config
+<span class="w">    </span>-c<span class="w"> </span>/kuhpc/work/kucg/observer/profiles/kucg.config
 <span class="w">    </span>--input<span class="w"> </span>sample_sheet.csv<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--genome<span class="w"> </span>BDGP6<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--outdir<span class="w"> </span>output<span class="w"> </span><span class="se">\</span>
@@ -886,7 +886,7 @@ Ciao world!
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 11, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 9, 2024</span>
       
     
   </small>
