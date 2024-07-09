@@ -53,7 +53,7 @@
 
 * `--unqualified_perc`
     * Default: 40
-    * Percent threhold of unqualified bases to pass reads.
+    * Percent threshold of unqualified bases to pass reads.
 
 
 ## Pipeline Default Outputs 
