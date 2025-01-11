@@ -9,4 +9,5 @@ Documentation and tutorials for performing analyses using high performance compu
 Detailed documentation for analysis workflows:
 
 * [Workflows](workflows/index.md)
+    * [RNA-seq](workflows/rnaseq.md)
     * [Microbial RNA-seq](workflows/microbial_rnaseq.md)

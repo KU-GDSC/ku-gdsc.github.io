@@ -35,6 +35,7 @@ plugins:
   - git-revision-date-localized:
       type: date
       enabled_creation_date: true
+  - mkquartodocs
 
 nav:
     - index.md
@@ -48,4 +49,5 @@ nav:
       - documentation/cheatsheet.md
       - Workflows:
         - documentation/workflows/index.md
+        - documentation/workflows/rnaseq.md
         - documentation/workflows/microbial_rnaseq.md
