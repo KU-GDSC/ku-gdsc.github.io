@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://KU-GDSC.github.io/documentation/workflows/rnaseq/">
       
       
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../microbial_rnaseq/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -245,10 +249,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../" class="md-tabs__link">
           
   
@@ -395,6 +401,8 @@
       
   
   
+    
+  
   
     
     
@@ -413,13 +421,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           
@@ -440,7 +448,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Documentation and Training
@@ -513,6 +521,8 @@
                 
   
   
+    
+  
   
     
     
@@ -523,15 +533,17 @@
       
         
       
+        
+      
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" checked>
         
           
           
@@ -552,13 +564,141 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_5">
             <span class="md-nav__icon md-icon"></span>
             Workflows
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    RNA-seq
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    RNA-seq
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-methods" class="md-nav__link">
+    Summary of methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-parameters" class="md-nav__link">
+    Required parameters:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-parameters" class="md-nav__link">
+    Optional parameters:
+  </a>
+  
+    <nav class="md-nav" aria-label="Optional parameters:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-optional-parameters" class="md-nav__link">
+    General optional parameters:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fastp-filtering-parameters" class="md-nav__link">
+    fastp filtering parameters:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bowtie2-parameters" class="md-nav__link">
+    bowtie2 parameters:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipeline-default-outputs" class="md-nav__link">
+    Pipeline Default Outputs
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
               
             
               
@@ -619,6 +759,7 @@
 <ul>
 <li>Index generated with <a href="http://deweylab.github.io/RSEM" target="_blank">RSEM</a></li>
 <li>Filter and trim reads with <a href="https://github.com/OpenGene/fastp" target="_blank">fastp</a></li>
+<li>Strand determination with <a href="https://pypi.org/project/how-are-we-stranded-here/" target="_blank">how are we stranded here</a></li>
 <li>Quality checking of reads with <a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/" target="_blank">FastQC</a></li>
 <li>Reads mapped to reference and quantified with <a href="http://deweylab.github.io/RSEM" target="_blank">RSEM</a></li>
 <li>Alignment post-processing and QC with <a href="https://broadinstitute.github.io/picard/" target="_blank">Picard</a></li>
@@ -649,20 +790,6 @@
 </ul>
 </li>
 <li>
-<p><code>--strandedness</code></p>
-<ul>
-<li>Default: <code>NA</code></li>
-<li>Supported options are <code>reverse_stranded</code>, <code>forward_stranded</code>, <code>non_stranded</code></li>
-</ul>
-</li>
-<li>
-<p><code>--concat_lanes</code></p>
-<ul>
-<li>Default: <code>false</code></li>
-<li>Options: <code>false</code> and <code>true</code>. Default: <code>false</code>. If this boolean is specified, FASTQ files will be concatenated by sample. Used in cases where samples are divided across individual sequencing lanes.</li>
-</ul>
-</li>
-<li>
 <p><code>--fasta</code></p>
 <ul>
 <li>Default: <code>/&lt;PATH&gt;</code></li>
@@ -684,7 +811,68 @@
 </ul>
 </li>
 </ul>
-<h3 id="fastp-filtering-paramenters">fastp filtering paramenters:<a class="headerlink" href="#fastp-filtering-paramenters" title="Permanent link">#</a></h3>
+<h3 id="optional-parameters">Optional parameters:<a class="headerlink" href="#optional-parameters" title="Permanent link">#</a></h3>
+<h4 id="general-optional-parameters">General optional parameters:<a class="headerlink" href="#general-optional-parameters" title="Permanent link">#</a></h4>
+<ul>
+<li>
+<p><code>--rsem_aligner</code></p>
+<ul>
+<li>Default: <code>bowtie2</code></li>
+<li>Options: <code>bowtie2</code> or <code>star</code></li>
+</ul>
+</li>
+<li>
+<p><code>--strandedness</code></p>
+<ul>
+<li>Default: <code>NA</code></li>
+<li>Supported options are <code>reverse_stranded</code>, <code>forward_stranded</code>, <code>non_stranded</code></li>
+<li>Strandedness of libraries is determined automatically by <a href="https://pypi.org/project/how-are-we-stranded-here/" target="_blank">how are we stranded here</a>, and this parameter is used as a fallback if the automatic strand determination fails</li>
+</ul>
+</li>
+<li>
+<p><code>--concat_lanes</code></p>
+<ul>
+<li>Default: <code>false</code></li>
+<li>Options: <code>false</code> and <code>true</code>. Default: <code>false</code>. If this boolean is specified, FASTQ files will be concatenated by sample. Used in cases where samples are divided across individual sequencing lanes.</li>
+</ul>
+</li>
+<li>
+<p><code>--rsem_index</code></p>
+<ul>
+<li>Default: <code>/&lt;PATH&gt;</code></li>
+<li>Enables the use of indices that were previously generated with this pipeline, by providing the path to that directory. Will generate an error if any files are missing. If using this parameter, do not use <code>--fasta</code> and <code>--gtf</code></li>
+</ul>
+</li>
+<li>
+<p><code>--extension</code></p>
+<ul>
+<li>Default: <code>.fastq.gz</code></li>
+<li>Expected file extension for input read files, modify if files are not compressed or have a different form (e.g. ".fastq" or ".fq.gz")</li>
+</ul>
+</li>
+<li>
+<p><code>--pattern</code></p>
+<ul>
+<li>Default: <code>*_R{1,2}*</code></li>
+<li>Expected R1/R2 matching pattern for paired-end read files in the <code>--sample_folder</code> path. In concert with <code>--extension</code> the default values will match files such as <code>sampleID.L001.R1.fastq.gz</code> and <code>sampleID.L001.R2.fastq.gz</code></li>
+</ul>
+</li>
+<li>
+<p><code>keep_intermediate</code></p>
+<ul>
+<li>Default: <code>false</code></li>
+<li>If <code>true</code> workflow will output intermediate alignment files (unsorted BAMs, etc.)</li>
+</ul>
+</li>
+<li>
+<p><code>keep_reference</code></p>
+<ul>
+<li>Default: <code>false</code></li>
+<li>If true workflow will save a copy of the RSEM indices to the output directory</li>
+</ul>
+</li>
+</ul>
+<h4 id="fastp-filtering-parameters">fastp filtering parameters:<a class="headerlink" href="#fastp-filtering-parameters" title="Permanent link">#</a></h4>
 <ul>
 <li>
 <p><code>--quality_phred</code></p>
@@ -698,6 +886,14 @@
 <ul>
 <li>Default: 40</li>
 <li>Percent threshold of unqualified bases to pass reads.</li>
+</ul>
+</li>
+</ul>
+<h4 id="bowtie2-parameters">bowtie2 parameters:<a class="headerlink" href="#bowtie2-parameters" title="Permanent link">#</a></h4>
+<ul>
+<li><code>--seed_length</code><ul>
+<li>Default: 25</li>
+<li>From RSEM manual: If RSEM runs Bowtie, it uses this value for Bowtie's seed length parameter. Any read with its or at least one of its mates' (for paired-end reads) length less than this value will be ignored.</li>
 </ul>
 </li>
 </ul>
@@ -727,20 +923,24 @@
 <td>RSEM-generated isoform-level TPM counts merged across all samples</td>
 </tr>
 <tr>
-<td><code>microbial_rnaseq_report.html</code></td>
+<td><code>rnaseq_report.html</code></td>
 <td>Nextflow autogenerated report</td>
+</tr>
+<tr>
+<td><code>index/</code></td>
+<td>RSEM-generated indices saved with optional parameter <code>keep_reference</code></td>
 </tr>
 <tr>
 <td><code>multiqc/</code></td>
 <td>MultiQC report summarizing quality metrics across all samples in the run</td>
 </tr>
 <tr>
-<td><code>${sampleID}/bam/${sampleID}.genome.bam</code></td>
-<td>RSEM-generated alignment of reads to the reference genome</td>
+<td><code>${sampleID}/bam/</code></td>
+<td>RSEM-generated alignments of reads to the reference genome and transcriptome</td>
 </tr>
 <tr>
-<td><code>${sampleID}/bam/${sampleID}.transcript.bam</code></td>
-<td>RSEM-generated alignment of reads to the reference transcriptome</td>
+<td><code>${sampleID}/stat/</code></td>
+<td>QC, strand, and Picard metrics files for each sample</td>
 </tr>
 <tr>
 <td><code>${sampleID}/${sampleID}.genes.results</code></td>
@@ -756,35 +956,13 @@
 </tr>
 </tbody>
 </table>
-<h2 id="workflow-validation">Workflow Validation<a class="headerlink" href="#workflow-validation" title="Permanent link">#</a></h2>
-<p>The genome assembly and annotation for <em>Drosophila melanogaster</em> were
-downloaded from <a href="https://ftp.ensembl.org/pub/release-110/fasta/drosophila_melanogaster/dna/">Ensembl v110</a>
-and used to generate simulated RNA-seq reads with the function 
-<code>simReads</code> in the R package <a href="https://doi.org/doi:10.18129/B9.bioc.Rsubread">Rsubread</a>. To test the performance of the workflow, we generated three sets of
-"control" paired-end reads, in which the TPM values were assigned based on
-random sampling, and three sets of "case" control reads, in which 50 genes
-were randomly selected to have substantially higher TPM values.</p>
-<p>We then ran the workflow using the <em>D. melanogaster</em> reference to generate
-indices, and compared the raw count values quantified by RSEM with the
-"true" count values expected from the simulated reads generated by Rsubread.</p>
-<p><img alt="Count comparison" src="dm_count_comparison.png" /></p>
-<p>The dashed line represents a 1:1 reference, and the deviation of the 
-counts quantified by RSEM from the "True" counts is due to the quality
-filtering of the read data, as the reads were simulated to include
-sequencing error.</p>
-<p>We then performed differential expression analyses on both the true
-counts and the counts estimated by RSEM in the workflow.</p>
-<p><img alt="DGE comparison" src="dm_dge_comparison.png" /></p>
-<p>Again, the dashed line is a 1:1 reference. The red points are those
-which would be scored as "significant" with standard thresholds of
-| log<sub>2</sub> fold-change | &gt; 2 and FDR-adjusted <em>P</em>-values &lt; 0.01.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 16, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 11, 2025</span>
       
     
   </small>
