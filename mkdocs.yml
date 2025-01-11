@@ -51,3 +51,4 @@ nav:
         - documentation/workflows/index.md
         - documentation/workflows/rnaseq.md
         - documentation/workflows/microbial_rnaseq.md
+        - documentation/workflows/wgs.md
