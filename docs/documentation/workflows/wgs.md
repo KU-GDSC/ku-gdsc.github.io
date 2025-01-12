@@ -78,19 +78,27 @@
 * `--mismatch_penalty`
     * Default: "-B 8"
 
+* `--bwa_min_score`
+    * Default: null
+    * Threshold of alignment quality score to emit read alignment
+
 #### Variant calling parameters:
 
 * `--ploidy`
     * Default: 2
+    * Options: 1, 2
 
 * `--mpileup_depth`
     * Default: 100
+    * For a given position, read maximally INT reads per input file
 
 * `--skip_indels`
     * Default: false
+    * If true, do not call indel sites
 
 * `--variants_only`
     * Default: true
+    * If true, only emit variant sites (e.g. not homozygous reference)
 
 #### Variant filtering parameters:
 
