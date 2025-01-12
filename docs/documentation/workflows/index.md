@@ -3,7 +3,8 @@
 ## KU GDSC developed workflows: 
 
 1. [RNA-seq: `rnaseq`](rnaseq.md)
-1. [Microbial RNA-seq: `microbial_rnaseq`](microbial_rnaseq.md)  
+1. [Microbial RNA-seq: `microbial_rnaseq`](microbial_rnaseq.md)
+1. [WGS Variant Calling: `wgs`](wgs.md)
 
 
 ### Quick Start for KU Users

@@ -11,3 +11,4 @@ Detailed documentation for analysis workflows:
 * [Workflows](workflows/index.md)
     * [RNA-seq](workflows/rnaseq.md)
     * [Microbial RNA-seq](workflows/microbial_rnaseq.md)
+    * [WGS Variant Calling](workflows/wgs.md)
