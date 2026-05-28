@@ -1002,11 +1002,11 @@
 </tr>
 <tr>
 <td><code>wgs_cohort_variants_bcftools_filtered_genotype_table.tsv</code></td>
-<td>RSEM-generated gene-level TPM counts merged across all samples</td>
+<td>Genotype table including genotype, depth, allele depth, and PL values for each sample at each site</td>
 </tr>
 <tr>
 <td><code>wgs_cohort_variants_bcftools_filtered_site_table.tsv</code></td>
-<td>RSEM-generated isoform-level raw counts merged across all samples</td>
+<td>Variant table including site-level quality, depth, allele depth, MQ, and filter for each site</td>
 </tr>
 <tr>
 <td><code>wgs_report.html</code></td>
@@ -1025,6 +1025,10 @@
 <td>QC and Picard metrics files for each sample</td>
 </tr>
 <tr>
+<td><code>${sampleID}/bam/</code></td>
+<td>Folder containing BAM files saved with optional parameter <code>keep_intermediate</code></td>
+</tr>
+<tr>
 <td><code>trace.txt</code></td>
 <td>Nextflow trace of processes</td>
 </tr>
@@ -1036,7 +1040,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 12, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 28, 2026</span>
       
     
   </small>
